@@ -1,0 +1,40 @@
+{
+    "tokenized_equations": [
+        {
+            "context": "Lagrangian for a free particle in Newtonian mechanics",
+            "equation": "L = (1/2) m v^2"
+        },
+        {
+            "context": "Lagrangian for a charged particle in an EM field",
+            "equation": "L = (1/2) m v^2 + q A·v - qφ"
+        },
+        {
+            "context": "Lagrangian for a simple harmonic oscillator",
+            "equation": "L = (1/2) m v^2 - (1/2) k x^2"
+        },
+        {
+            "context": "Lagrangian for a pendulum",
+            "equation": "L = (1/2) m l^2 θ̇^2 - m g l (1 - cos(θ))"
+        },
+        {
+            "context": "Maxwell's Lagrangian",
+            "equation": "L = -1/4 F_{\mu\nu} F^{\mu\nu}"
+        },
+        {
+            "context": "Einstein-Hilbert action",
+            "equation": "L = √(-g) R"
+        },
+        {
+            "context": "Klein-Gordon Lagrangian",
+            "equation": "L = (1/2) (∂μφ ∂μφ - m^2 φ^2)"
+        },
+        {
+            "context": "Dirac Lagrangian",
+            "equation": "L = i ψ̄ γ^μ ∂μ ψ - m ψ̄ ψ"
+        },
+        {
+            "context": "Yang-Mills Lagrangian",
+            "equation": "L = -1/4 F^a_{\mu\nu} F^{a\mu\nu}"
+        }
+    ]
+}

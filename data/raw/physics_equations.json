@@ -1,0 +1,34 @@
+{
+  "equations": [
+    {
+      "name": "Lagrangian for a free particle",
+      "equation": "L = (1/2) m v^2",
+      "context": "Classical Mechanics"
+    },
+    {
+      "name": "Maxwell's Lagrangian",
+      "equation": "L = -1/4 F_{\\mu\nu} F^{\\mu\nu}",
+      "context": "Electrodynamics"
+    },
+    {
+      "name": "Einstein-Hilbert action",
+      "equation": "L = \\sqrt{-g} R",
+      "context": "Relativity"
+    },
+    {
+      "name": "Klein-Gordon Lagrangian",
+      "equation": "L = \\frac{1}{2} \\partial_{\\mu} \\phi \\partial^{\\mu} \\phi - \\frac{1}{2} m^2 \\phi^2",
+      "context": "Quantum Field Theory"
+    },
+    {
+      "name": "Dirac Lagrangian",
+      "equation": "L = \\bar{\\psi}(i\\gamma^{\\mu} \\partial_{\\mu} - m)\\psi",
+      "context": "Quantum Field Theory"
+    },
+    {
+      "name": "Yang-Mills Lagrangian",
+      "equation": "L = -\\frac{1}{4} F^{a}_{\\mu\nu} F^{a\\mu\nu}",
+      "context": "Quantum Field Theory"
+    }
+  ]
+}
