@@ -1,0 +1,85 @@
+[
+  {
+    "input_context": "Classical Mechanics",
+    "input_name": "Lagrangian for a free particle",
+    "input_text": "Classical Mechanics: Lagrangian for a free particle",
+    "output_text": "L = (1/2) m v^2",
+    "is_masked": false
+  },
+  {
+    "input_context": "Electrodynamics",
+    "input_name": "Maxwell's Lagrangian",
+    "input_text": "Electrodynamics: Maxwell's Lagrangian",
+    "output_text": "L = -1/4 F_{\\mu\nu} F^{\\mu\nu}",
+    "is_masked": false
+  },
+  {
+    "input_context": "Electrodynamics",
+    "input_name": "Maxwell's Lagrangian",
+    "input_text": "Electrodynamics: Maxwell's Lagrangian with partial equation: -1/4 F_{\\mu [MASK] F^{\\mu u}",
+    "output_text": "L = -1/4 F_{\\mu\nu} F^{\\mu\nu}",
+    "is_masked": true,
+    "masked_indices": [
+      2
+    ]
+  },
+  {
+    "input_context": "Relativity",
+    "input_name": "Einstein-Hilbert action",
+    "input_text": "Relativity: Einstein-Hilbert action",
+    "output_text": "L = \\sqrt{-g} R",
+    "is_masked": false
+  },
+  {
+    "input_context": "Quantum Field Theory",
+    "input_name": "Klein-Gordon Lagrangian",
+    "input_text": "Quantum Field Theory: Klein-Gordon Lagrangian",
+    "output_text": "L = \\frac{1}{2} \\partial_{\\mu} \\phi \\partial^{\\mu} \\phi - \\frac{1}{2} m^2 \\phi^2",
+    "is_masked": false
+  },
+  {
+    "input_context": "Quantum Field Theory",
+    "input_name": "Klein-Gordon Lagrangian",
+    "input_text": "Quantum Field Theory: Klein-Gordon Lagrangian with partial equation: \\frac{1}{2} \\partial_{\\mu} \\phi [MASK] \\phi [MASK] \\frac{1}{2} m^2 \\phi^2",
+    "output_text": "L = \\frac{1}{2} \\partial_{\\mu} \\phi \\partial^{\\mu} \\phi - \\frac{1}{2} m^2 \\phi^2",
+    "is_masked": true,
+    "masked_indices": [
+      3,
+      5
+    ]
+  },
+  {
+    "input_context": "Quantum Field Theory",
+    "input_name": "Dirac Lagrangian",
+    "input_text": "Quantum Field Theory: Dirac Lagrangian",
+    "output_text": "L = \\bar{\\psi}(i\\gamma^{\\mu} \\partial_{\\mu} - m)\\psi",
+    "is_masked": false
+  },
+  {
+    "input_context": "Quantum Field Theory",
+    "input_name": "Dirac Lagrangian",
+    "input_text": "Quantum Field Theory: Dirac Lagrangian with partial equation: \\bar{\\psi}(i\\gamma^{\\mu} \\partial_{\\mu} [MASK] m)\\psi",
+    "output_text": "L = \\bar{\\psi}(i\\gamma^{\\mu} \\partial_{\\mu} - m)\\psi",
+    "is_masked": true,
+    "masked_indices": [
+      2
+    ]
+  },
+  {
+    "input_context": "Quantum Field Theory",
+    "input_name": "Yang-Mills Lagrangian",
+    "input_text": "Quantum Field Theory: Yang-Mills Lagrangian",
+    "output_text": "L = -\\frac{1}{4} F^{a}_{\\mu\nu} F^{a\\mu\nu}",
+    "is_masked": false
+  },
+  {
+    "input_context": "Quantum Field Theory",
+    "input_name": "Yang-Mills Lagrangian",
+    "input_text": "Quantum Field Theory: Yang-Mills Lagrangian with partial equation: -\\frac{1}{4} F^{a}_{\\mu u} [MASK] u}",
+    "output_text": "L = -\\frac{1}{4} F^{a}_{\\mu\nu} F^{a\\mu\nu}",
+    "is_masked": true,
+    "masked_indices": [
+      3
+    ]
+  }
+]

@@ -74,7 +74,10 @@ class LagrangianTransformer:
         num_return_sequences: int = 1
     ) -> List[str]:
         """Generate Lagrangian given a context"""
-        inputs = self.tokenizer(context, return_tensors="pt")
+        # Add a better prompt format to guide the model
+        formatted_prompt = f"Given the following physics context, generate the corresponding Lagrangian equation:\nContext: {context}\nLagrangian equation: L = "
+        
+        inputs = self.tokenizer(formatted_prompt, return_tensors="pt")
         
         # Move to GPU if available
         if torch.cuda.is_available():
@@ -83,12 +86,15 @@ class LagrangianTransformer:
         
         # Generate text
         outputs = self.model.generate(
-            inputs.input_ids,
+            inputs['input_ids'],
+            attention_mask=inputs['attention_mask'],  # Explicitly pass attention mask
             max_length=max_length,
             temperature=temperature,
             num_return_sequences=num_return_sequences,
             pad_token_id=self.tokenizer.eos_token_id,
-            do_sample=True
+            do_sample=True,
+            top_k=50,
+            top_p=0.95
         )
         
         # Decode and return

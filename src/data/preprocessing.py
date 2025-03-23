@@ -70,7 +70,7 @@ class LagrangianPreprocessor:
             df.to_json(output_path, orient='records')
             print(f"Processed data saved to {output_path}")
         
-        return df
+        return df  # Return only the dataframe
     
     def create_training_examples(self, df: pd.DataFrame, mask_prob: float = 0.3) -> List[Dict]:
         """Create training examples by masking parts of equations"""
@@ -79,3 +79,34 @@ class LagrangianPreprocessor:
         for _, row in df.iterrows():
             tokens = row['tokens']
             n_tokens = len(tokens)
+            
+            # Create a complete example (no masking)
+            training_examples.append({
+                'input_context': row['context'],
+                'input_name': row['name'],
+                'input_text': f"{row['context']}: {row['name']}",
+                'output_text': row['equation'],
+                'is_masked': False
+            })
+            
+            # Create a masked example
+            if n_tokens > 3:  # Only mask if we have enough tokens
+                mask_count = max(1, int(n_tokens * mask_prob))
+                mask_indices = np.random.choice(range(n_tokens), mask_count, replace=False)
+                
+                masked_tokens = tokens.copy()
+                for idx in mask_indices:
+                    masked_tokens[idx] = '[MASK]'
+                
+                masked_equation = ' '.join(masked_tokens)
+                
+                training_examples.append({
+                    'input_context': row['context'],
+                    'input_name': row['name'],
+                    'input_text': f"{row['context']}: {row['name']} with partial equation: {masked_equation}",
+                    'output_text': row['equation'],
+                    'is_masked': True,
+                    'masked_indices': mask_indices.tolist()
+                })
+        
+        return training_examples  # Return the examples

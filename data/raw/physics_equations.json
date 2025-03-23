@@ -1,34 +1,262 @@
 {
   "equations": [
     {
-      "name": "Lagrangian for a free particle",
+      "name": "Free particle",
       "equation": "L = (1/2) m v^2",
-      "context": "Classical Mechanics"
+      "context": "Classical Mechanics - Single particle with no potential"
     },
+    {
+      "name": "Particle in gravitational field",
+      "equation": "L = (1/2) m v^2 - m g h",
+      "context": "Classical Mechanics - Uniform gravitational field"
+    },
+    {
+      "name": "Simple harmonic oscillator",
+      "equation": "L = (1/2) m v^2 - (1/2) k x^2",
+      "context": "Classical Mechanics - Linear restoring force"
+    },
+    {
+      "name": "Damped harmonic oscillator",
+      "equation": "L = (1/2) m v^2 - (1/2) k x^2 - b x v",
+      "context": "Classical Mechanics - Oscillator with dissipation"
+    },
+    {
+      "name": "Forced harmonic oscillator",
+      "equation": "L = (1/2) m v^2 - (1/2) k x^2 + F(t) x",
+      "context": "Classical Mechanics - Oscillator with external driving force"
+    },
+    
+    {
+      "name": "Double pendulum",
+      "equation": "L = (1/2) m₁ l₁² θ̇₁² + (1/2) m₂ [l₁² θ̇₁² + l₂² θ̇₂² + 2 l₁ l₂ θ̇₁ θ̇₂ cos(θ₁ - θ₂)] - (m₁ + m₂) g l₁ (1 - cos θ₁) - m₂ g l₂ (1 - cos θ₂)",
+      "context": "Classical Mechanics - Two-body pendulum system"
+    },
+    {
+      "name": "Charged particle in EM field",
+      "equation": "L = (1/2) m v^2 + q (A⋅v - φ)",
+      "context": "Classical Mechanics - Particle in electromagnetic potential"
+    },
+    {
+      "name": "Central force motion",
+      "equation": "L = (1/2) m (ṙ² + r² θ̇²) - U(r)",
+      "context": "Classical Mechanics - Motion in a central potential"
+    },
+    {
+      "name": "Kepler problem",
+      "equation": "L = (1/2) m (ṙ² + r² θ̇²) + k/r",
+      "context": "Classical Mechanics - Gravitational or Coulomb potential"
+    },
+    {
+      "name": "Rigid body rotation",
+      "equation": "L = (1/2) I₁ ω₁² + (1/2) I₂ ω₂² + (1/2) I₃ ω₃²",
+      "context": "Classical Mechanics - Principal axes rotation"
+    },
+    
+    {
+      "name": "Ideal fluid",
+      "equation": "L = ∫ [ρ (∂φ/∂t + (1/2) (∇φ)² + gz)] dV",
+      "context": "Fluid Mechanics - Incompressible, irrotational flow"
+    },
+    {
+      "name": "Navier-Stokes Lagrangian",
+      "equation": "L = ∫ [ρ (∂φ/∂t + (1/2) v² + p/ρ + gz)] dV",
+      "context": "Fluid Mechanics - Viscous flow"
+    },
+    
     {
       "name": "Maxwell's Lagrangian",
-      "equation": "L = -1/4 F_{\\mu\nu} F^{\\mu\nu}",
-      "context": "Electrodynamics"
+      "equation": "L = -(1/4) F_μν F^μν",
+      "context": "Electrodynamics - Electromagnetic field without sources"
     },
     {
-      "name": "Einstein-Hilbert action",
-      "equation": "L = \\sqrt{-g} R",
-      "context": "Relativity"
+      "name": "Maxwell-Dirac Lagrangian",
+      "equation": "L = -(1/4) F_μν F^μν + ψ̄(iγ^μ D_μ - m)ψ",
+      "context": "Electrodynamics - Electromagnetic field coupled to fermions"
     },
+    {
+      "name": "Proca Lagrangian",
+      "equation": "L = -(1/4) F_μν F^μν + (1/2) m² A_μ A^μ",
+      "context": "Electrodynamics - Massive photon field"
+    },
+    
+    {
+      "name": "Schrödinger Lagrangian",
+      "equation": "L = (iℏ/2) (ψ* ∂ψ/∂t - ψ ∂ψ*/∂t) - (ℏ²/2m) ∇ψ* · ∇ψ - V(x) ψ*ψ",
+      "context": "Quantum Mechanics - Non-relativistic wavefunction"
+    },
+    {
+      "name": "Quantum harmonic oscillator",
+      "equation": "L = (iℏ/2) (ψ* ∂ψ/∂t - ψ ∂ψ*/∂t) - (ℏ²/2m) ∇ψ* · ∇ψ - (1/2) m ω² x² ψ*ψ",
+      "context": "Quantum Mechanics - Harmonic potential"
+    },
+    
     {
       "name": "Klein-Gordon Lagrangian",
-      "equation": "L = \\frac{1}{2} \\partial_{\\mu} \\phi \\partial^{\\mu} \\phi - \\frac{1}{2} m^2 \\phi^2",
-      "context": "Quantum Field Theory"
+      "equation": "L = (1/2) ∂_μ φ ∂^μ φ - (1/2) m² φ²",
+      "context": "Quantum Field Theory - Scalar field"
+    },
+    {
+      "name": "φ⁴ theory",
+      "equation": "L = (1/2) ∂_μ φ ∂^μ φ - (1/2) m² φ² - (λ/4!) φ⁴",
+      "context": "Quantum Field Theory - Self-interacting scalar field"
+    },
+    {
+      "name": "Complex scalar field",
+      "equation": "L = ∂_μ φ* ∂^μ φ - m² φ* φ",
+      "context": "Quantum Field Theory - Charged scalar field"
     },
     {
       "name": "Dirac Lagrangian",
-      "equation": "L = \\bar{\\psi}(i\\gamma^{\\mu} \\partial_{\\mu} - m)\\psi",
-      "context": "Quantum Field Theory"
+      "equation": "L = ψ̄(iγ^μ ∂_μ - m)ψ",
+      "context": "Quantum Field Theory - Spinor field"
+    },
+    {
+      "name": "QED Lagrangian",
+      "equation": "L = -(1/4) F_μν F^μν + ψ̄(iγ^μ D_μ - m)ψ",
+      "context": "Quantum Field Theory - Quantum Electrodynamics"
     },
     {
       "name": "Yang-Mills Lagrangian",
-      "equation": "L = -\\frac{1}{4} F^{a}_{\\mu\nu} F^{a\\mu\nu}",
-      "context": "Quantum Field Theory"
+      "equation": "L = -(1/4) F^a_μν F^aμν",
+      "context": "Quantum Field Theory - Non-Abelian gauge theory"
+    },
+    {
+      "name": "QCD Lagrangian",
+      "equation": "L = -(1/4) G^a_μν G^aμν + ψ̄(iγ^μ D_μ - m)ψ",
+      "context": "Quantum Field Theory - Quantum Chromodynamics"
+    },
+    {
+      "name": "Higgs mechanism",
+      "equation": "L = (D_μ φ)† (D^μ φ) - μ² φ† φ - λ(φ† φ)²",
+      "context": "Quantum Field Theory - Spontaneous symmetry breaking"
+    },
+    {
+      "name": "Standard Model Lagrangian (simplified)",
+      "equation": "L = -(1/4) F_μν F^μν - (1/4) G^a_μν G^aμν - (1/4) W^a_μν W^aμν + ψ̄(iγ^μ D_μ - m)ψ + (D_μ φ)† (D^μ φ) - V(φ)",
+      "context": "Quantum Field Theory - Simplified electroweak and strong interactions"
+    },
+    
+    {
+      "name": "Relativistic free particle",
+      "equation": "L = -mc² √(1 - v²/c²)",
+      "context": "Relativity - Special relativistic point particle"
+    },
+    {
+      "name": "Einstein-Hilbert action",
+      "equation": "L = √(-g) R",
+      "context": "Relativity - General relativity without matter"
+    },
+    {
+      "name": "Einstein-Maxwell action",
+      "equation": "L = √(-g) [R - (1/4) F_μν F^μν]",
+      "context": "Relativity - Gravitational and electromagnetic fields"
+    },
+    {
+      "name": "Schwarzschild Lagrangian",
+      "equation": "L = -(1/2) m gμν ẋ^μ ẋ^ν",
+      "context": "Relativity - Particle in Schwarzschild spacetime"
+    },
+    {
+      "name": "f(R) gravity",
+      "equation": "L = √(-g) f(R)",
+      "context": "Relativity - Modified gravity theory"
+    },
+    
+    {
+      "name": "FLRW cosmology",
+      "equation": "L = √(-g) [R - (1/2) ∂_μ φ ∂^μ φ - V(φ)]",
+      "context": "Cosmology - Homogeneous universe with scalar field"
+    },
+    {
+      "name": "Λ-CDM model",
+      "equation": "L = √(-g) [R - 2Λ] + L_matter",
+      "context": "Cosmology - Universe with cosmological constant"
+    },
+    
+    {
+      "name": "Ginzburg-Landau theory",
+      "equation": "L = α|ψ|² + β|ψ|⁴ + (1/2m) |(-iℏ∇ - (2e/c)A)ψ|² + (1/8π) (∇×A)²",
+      "context": "Condensed Matter - Superconductivity"
+    },
+    {
+      "name": "BCS theory",
+      "equation": "L = ψ̄(iℏ∂_t - ξ(-i∇))ψ - g ψ̄↑ψ̄↓ψ↓ψ↑",
+      "context": "Condensed Matter - Superconductivity microscopic theory"
+    },
+    {
+      "name": "Heisenberg model",
+      "equation": "L = (1/2) ∑_ij J_ij S_i · S_j",
+      "context": "Condensed Matter - Quantum magnetism"
+    },
+    {
+      "name": "Hubbard model",
+      "equation": "L = -t ∑_<ij>σ (c^†_iσ c_jσ + c^†_jσ c_iσ) + U ∑_i n_i↑ n_i↓",
+      "context": "Condensed Matter - Strongly correlated electrons"
+    },
+    
+    {
+      "name": "Ising model",
+      "equation": "L = -J ∑_<ij> s_i s_j - B ∑_i s_i",
+      "context": "Statistical Mechanics - Discrete spin system"
+    },
+    {
+      "name": "XY model",
+      "equation": "L = -J ∑_<ij> cos(θ_i - θ_j)",
+      "context": "Statistical Mechanics - Continuous spin system"
+    },
+    
+    {
+      "name": "Nambu-Goto action",
+      "equation": "L = -T ∫ dσ dτ √(-det(∂_α X^μ ∂_β X_μ))",
+      "context": "String Theory - Bosonic string worldsheet"
+    },
+    {
+      "name": "Polyakov action",
+      "equation": "L = -(T/2) ∫ d²σ √(-h) h^αβ ∂_α X^μ ∂_β X_μ",
+      "context": "String Theory - Alternative bosonic string action"
+    },
+    {
+      "name": "Superstring action",
+      "equation": "L = -(T/2) ∫ d²σ [√(-h) h^αβ ∂_α X^μ ∂_β X_μ - i ψ̄^μ ρ^α ∂_α ψ_μ]",
+      "context": "String Theory - Fermions on string worldsheet"
+    },
+    
+    {
+      "name": "Pendulum",
+      "equation": "L = (1/2) m (ẋ² + ẏ²) - m g y - λ(x² + y² - l²)",
+      "context": "Constrained Systems - Lagrange multiplier enforcement"
+    },
+    {
+      "name": "Relativistic string",
+      "equation": "L = ∫ dσ [p_μ Ẋ^μ - (1/2) (p² + (X')² - T²)]",
+      "context": "Constrained Systems - Hamiltonian with constraints"
+    },
+    
+    {
+      "name": "Gibbs free energy",
+      "equation": "L = U - TS + pV",
+      "context": "Thermodynamics - Isothermal-isobaric ensemble"
+    },
+    {
+      "name": "Helmholtz free energy",
+      "equation": "L = U - TS",
+      "context": "Thermodynamics - Canonical ensemble"
+    },
+    
+    {
+      "name": "Nonlinear Schrödinger equation",
+      "equation": "L = (iℏ/2) (ψ* ∂ψ/∂t - ψ ∂ψ*/∂t) - (ℏ²/2m) ∇ψ* · ∇ψ - g|ψ|⁴",
+      "context": "Nonlinear Optics - Nonlinear wave propagation"
+    },
+    {
+      "name": "Chern-Simons theory",
+      "equation": "L = (k/4π) ε^μνρ A_μ ∂_ν A_ρ",
+      "context": "Topological Field Theory - 3D gauge theory"
+    },
+    {
+      "name": "Wess-Zumino-Witten model",
+      "equation": "L = (1/2λ²) Tr(∂_μ g^(-1) ∂^μ g) + (k/12π) ∫ Tr[(g^(-1)dg)³]",
+      "context": "Conformal Field Theory - Non-linear sigma model"
     }
   ]
 }

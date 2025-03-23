@@ -1,9 +1,23 @@
-numpy
-torch
-transformers
-sympy
-matplotlib
-scikit-learn
-pandas
-PyYAML
-jupyter
+# Core dependencies
+torch>=1.9.0
+transformers>=4.11.0
+numpy>=1.19.5
+pandas>=1.3.0
+matplotlib>=3.4.3
+seaborn>=0.11.2
+tqdm>=4.62.0
+sympy>=1.8.0
+scikit-learn>=0.24.2
+
+# For LaTeX parsing
+antlr4-python3-runtime>=4.7.2
+
+# For symbolic regression (optional)
+gplearn>=0.4.1
+
+# For notebooks
+jupyter>=1.0.0
+ipywidgets>=7.6.5
+
+# For CUDA optimization
+cudatoolkit>=11.1
